@@ -136,6 +136,12 @@ ylabel('$|Y(j\omega)|$', 'Interpreter', 'latex');
 delta_l = abs(Y_l) - abs(U);
 delta_nl = abs(Y_nl) - abs(U);
 
+% Prikas samo moenata gde su te razlike (relativno male) tj. uglavnom nije
+% pojava promene zbog mnozenja sa amplitudom F.P.
+treshold = 0.05 * max(abs(Y_l));
+delta_l = delta_l(delta_l < treshold);
+delta_nl = delta_nl(delta_nl < treshold);
+
 % Prikaz samo pozitivnih frekvencija (0 do 15 Hz)
 figure;
 
