@@ -7,7 +7,10 @@ Ka = 1;
 Ki = 15;
 Kp = 500;
 vd = 30;
-[X1,X2] =meshgrid(-5:.2:5); %definisanje grid-a u faznom prostoru
+x1_star = Kc/Ki + Kf/Ki*vd +Ka/Ki*power(vd,2);
+x2_star = vd;
+%disp(x1_star, x2_star);
+[X1,X2] =meshgrid(-5:0.2:5); %definisanje grid-a u faznom prostoru
 for i=1:size(X1,1)
    for j=1:size(X2,1)
       DX1(i,j) = vd - X2(i,j);
