@@ -1,6 +1,8 @@
+%% Prvi zadatak c radna tacka pod i
 clear
 a = 1;
 b = 1;
+%%
 [X1,X2] = meshgrid(-1.5:.2:1.5); %definisanje grid-a u faznom prostoru
 for i=1:size(X1,1)
    for j=1:size(X2,1)

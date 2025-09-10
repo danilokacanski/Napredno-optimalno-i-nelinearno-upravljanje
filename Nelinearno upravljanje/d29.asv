@@ -4,10 +4,10 @@ m = 1500;
 Kc = 110;
 Kf = 2.5;
 Ka = 1;
-Ki = 15;
+Ki = 150;
 Kp = 500;
 vd = 30;
-q = (Kp + Kf + 2* Ka*vd)^2;
+q = power(Kp + Kf + 2* Ka*vd - Kc)^2;
 z = 4*Ki;
 st_fokus = z > q;
 x1_eq = Kc/Ki + Kf/Ki*vd +Ka/Ki*power(vd,2);
@@ -27,6 +27,6 @@ hold on
 x10=0;x20=0;
 while (max(x10, x20) < 100)
    [x10,x20]=ginput(1);
-   out = sim('eq_2_9_model_e'); %Simulink model sa pocetnim uslovima u integratorima x10 i x20
+   out = sim('eq_2_9_model'); %Simulink model sa pocetnim uslovima u integratorima x10 i x20
    figure(1),plot(out.x1.Data, out.x2.Data)
 end

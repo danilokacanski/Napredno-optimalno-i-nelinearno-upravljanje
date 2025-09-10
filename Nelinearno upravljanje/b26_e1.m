@@ -1,3 +1,4 @@
+%% Prvi zadatak b radna tacka 1
 % Define the range for a (positive only) and b
 a = linspace(0.01, 5, 200);   % strictly positive a
 b = linspace(-5, 5, 200);

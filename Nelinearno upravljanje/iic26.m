@@ -1,3 +1,4 @@
+%% Prvi zadatak c pod ii
 clear
 a = 1;
 b = -0.5;

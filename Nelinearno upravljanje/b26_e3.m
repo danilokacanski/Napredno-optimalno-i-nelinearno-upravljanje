@@ -1,3 +1,4 @@
+%% Prvi zadatak b radna tacka 3
 % Ranges (a > 0)
 a = linspace(0.01, 5, 200);   % strictly positive a
 b = linspace(-3, 3, 200);
